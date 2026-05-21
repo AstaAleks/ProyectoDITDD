@@ -2,6 +2,16 @@
 
 "use_scrict";
 
+let menu;
+let menu2;
+let accio;
+let titol;
+let hora;
+const llistat=[ ];
+let TitolModif;
+let missatge=" ";
+let modificarHora;
+let eliminarTasca;
 
 alert("¡Hola Buenas! Bienvenido a ibaiTask, la mejor aplicación para organizarse.\n\
 En esta aplicación, podràs organizarte con las siguientes opciones.\n\n\
@@ -14,7 +24,8 @@ En esta aplicación, podràs organizarte con las siguientes opciones.\n\n\
 \n\
 Tienes que elegir una de estas opciones,\n\
  para elegir alguna, escribe el numero asignado de cada uno");
-let menu=prompt("Que opción eliges? \n\n\
+
+menu=prompt("Que opción eliges? \n\n\
 · Añadir Task(01)\n\
 · Ver la lista de Tasks(02)\n\
 · Modificar la Task(03)\n\
@@ -24,18 +35,20 @@ let menu=prompt("Que opción eliges? \n\n\
 Tienes que elegir una de estas opciones,\n\
  para elegir alguna, escribe el numero asignado de cada uno.");
 
-let accio;
-let titol;
-let hora;
-const llistat=[ ];
-let TitolModif;
-let missatge=" ";
-let modificarHora;
-let eliminarTasca;
+
 
 while (menu = !"05"){
 
-
+    menu2=prompt("Que opción eliges? \n\n\
+    · Añadir Task(01)\n\
+    · Ver la lista de Tasks(02)\n\
+    · Modificar la Task(03)\n\
+    · Eliminar Task(04)\n\
+    · Salir de la aplicación(05)\n\
+    \n\
+    Tienes que elegir una de estas opciones,\n\
+    para elegir alguna, escribe el numero asignado de cada uno.");
+    
    switch(menu){
     case "01":
             titol=prompt("Como quieres llamar esta tarea?");
