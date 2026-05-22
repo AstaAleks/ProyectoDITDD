@@ -39,7 +39,7 @@ Tienes que elegir una de estas opciones,\n\
 
 while (menu = !"05"){
 
-    menu2=prompt("Que opción eliges? \n\n\
+    menu=prompt("Que opción eliges? \n\n\
     · Añadir Task(01)\n\
     · Ver la lista de Tasks(02)\n\
     · Modificar la Task(03)\n\
@@ -55,7 +55,7 @@ while (menu = !"05"){
             llistat[i]=titol;
     break;
 case "02":
-    "Aqui tienes la lista de tareas:"+llistat+".";
+    alert("Aqui tienes la lista de tareas:"+llistat+".");
     break;
 case "03":
     
