@@ -10,6 +10,7 @@ let hora;
 const llistat = [];
 let TitolModif;
 let missatge = " ";
+let modificarTasca;
 let modificarHora;
 let eliminarTasca;
 
@@ -51,13 +52,30 @@ while (menu = !"05") {
 
     switch (menu) {
         case "01":
-            titol = prompt("Como quieres llamar esta tarea?");
-            llistat[i] = titol;
+            
             break;
         case "02":
             alert("Aqui tienes la lista de tareas:" + llistat + ".");
             break;
         case "03":
+            modificarTasca= prompt("Introdueix el títol de la tasca que vols modificar");
+            for (let i = 0; i < llistat.length; i++){
+                if (modificarTasca == llistat[i]){
+                delete llistat[i]; //L'eliminam
+                titol = prompt("Como quieres llamar ahora a esta tarea?");
+                llistat[i] = titol;
+                }
+            alert("No s'ha trobat cap tasca amb aquest titol");
+            }
+            
+            break;
+        case "04":
+            alert("hola");
+        
+            
+
+    
+    }
 
 
 
