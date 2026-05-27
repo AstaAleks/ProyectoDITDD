@@ -9,6 +9,8 @@ let TitolModif;
 let missatge = " ";
 let modificarTasca;
 let eliminarTasca;
+let i = 0;
+let taskEncontrada = 0;
 
 alert("¡Hola Buenas! Bienvenido a ibaiTask, la mejor aplicación para organizarse.\n\
 En esta aplicación, podràs organizarte con las siguientes opciones.\n\n\
@@ -34,7 +36,36 @@ Tienes que elegir una de estas opciones,\n\
 
 
 
-while (menu = !"05") {
+while (menu != "05") {
+
+    switch (menu) {
+        case "01":
+            titol = prompt("Como quieres llamar ahora a esta tarea?");
+            llistat[i] = titol;
+            i++;
+            break;
+        case "02":
+            alert("Aqui tienes la lista de tareas:" + llistat + ".");
+            break;
+        case "03":
+            modificarTasca = prompt("Introdueix el títol de la tasca que vols modificar");
+            for (let j = 0; j < llistat.length && taskEncontrada == 0; j++) {
+                if (modificarTasca == llistat[j]) {
+                    titol = prompt("Como quieres llamar ahora a esta tarea?");
+                    llistat[i] = titol;
+                    taskEncontrada = 1;
+                }
+            }
+
+            if (taskEncontrada == 0) {
+                alert("No s'ha trobat cap tasca amb aquest titol");
+            }
+
+            break;
+        case "04":
+            alert("hola");
+            break;
+    }
 
     menu = prompt("Que opción eliges? \n\n\
     · Añadir Task(01)\n\
@@ -46,46 +77,10 @@ while (menu = !"05") {
     Tienes que elegir una de estas opciones,\n\
     para elegir alguna, escribe el numero asignado de cada uno.");
 
-    switch (menu) {
-        case "01":
-            titol = prompt("Como quieres llamar ahora a esta tarea?");
-                llistat[i] = titol;
-            break;
-        case "02":
-            alert("Aqui tienes la lista de tareas:" + llistat + ".");
-            break;
-        case "03":
-            modificarTasca= prompt("Introdueix el títol de la tasca que vols modificar");
-            for (let i = 0; i < llistat.length; i++){
-                if (modificarTasca == llistat[i]){
-                delete llistat[i]; //L'eliminam
-                titol = prompt("Como quieres llamar ahora a esta tarea?");
-                llistat[i] = titol;
-                }
-            alert("No s'ha trobat cap tasca amb aquest titol");
-            }
-            
-            break;
-        case "04":
-            alert("hola");
-            break;
-            
-            
+}
 
-    
-    }
-
-
-
-    }
-    
-    if (menu=="05"){
-        missatge="Fins la proxima, màster";
-    }
-alert(missatge)
-
-while (accion = !"05") {
-    accion = prompt("Que vols fer? Pots Afegir tasca, Veure llista de tasques, Modificar tasca, Eliminar Tasca i Sortir de l'aplicacio");
+if (menu == "05") {
+    alert("Fins la proxima, màster");
 }
 
 
