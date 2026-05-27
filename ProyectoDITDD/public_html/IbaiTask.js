@@ -3,15 +3,11 @@
 "use_scrict";
 
 let menu;
-let menu2;
-let accio;
 let titol;
-let hora;
 const llistat = [];
 let TitolModif;
 let missatge = " ";
 let modificarTasca;
-let modificarHora;
 let eliminarTasca;
 
 alert("¡Hola Buenas! Bienvenido a ibaiTask, la mejor aplicación para organizarse.\n\
@@ -52,7 +48,8 @@ while (menu = !"05") {
 
     switch (menu) {
         case "01":
-            
+            titol = prompt("Como quieres llamar ahora a esta tarea?");
+                llistat[i] = titol;
             break;
         case "02":
             alert("Aqui tienes la lista de tareas:" + llistat + ".");
@@ -71,7 +68,8 @@ while (menu = !"05") {
             break;
         case "04":
             alert("hola");
-        
+            break;
+            
             
 
     
@@ -80,22 +78,14 @@ while (menu = !"05") {
 
 
     }
-}
-
+    
+    if (menu=="05"){
+        missatge="Fins la proxima, màster";
+    }
+alert(missatge)
 
 while (accion = !"05") {
     accion = prompt("Que vols fer? Pots Afegir tasca, Veure llista de tasques, Modificar tasca, Eliminar Tasca i Sortir de l'aplicacio");
-}
-
-if (accion == "01") {
-    afegirTitol = prompt("Digues el titol de la tasca que vols afegir:");
-    afegirHora = prompt("Digues la data màxima de la tasca " + afegirTitol + ":");
-} else if (accion == "Modificar tasca") {
-    modificarTitol = prompt("Digues el titol de la tasca que vols ")
-} else if (accion == "Eliminar tasca") {
-    alert(eliminarTasca);
-} else if (accion == "Sortir de l'aplicacio") {
-    alert("Fins la proxima, màster!");
 }
 
 
