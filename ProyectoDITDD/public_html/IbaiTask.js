@@ -102,6 +102,8 @@ while (menu != "05") {
     \n\
     Tienes que elegir una de estas opciones,\n\
     para elegir alguna, escribe el numero asignado de cada uno.");
+                    
+taskEncontrada = 0;
 
 }
 
