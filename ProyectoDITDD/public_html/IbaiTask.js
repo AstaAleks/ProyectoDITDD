@@ -1,6 +1,6 @@
 /* global i */
 
-"use_scrict";
+"use scrict";
 
 let menu;
 let titol;
@@ -10,7 +10,7 @@ let missatge = " ";
 let modificarTasca;
 let eliminarTasca;
 let i = 0;
-let taskEncontrada = 0;
+let taskEncontrada=0;
 
 alert("¡Hola Buenas! Bienvenido a ibaiTask, la mejor aplicación para organizarse.\n\
 En esta aplicación, podràs organizarte con las siguientes opciones.\n\n\
@@ -45,14 +45,26 @@ while (menu != "05") {
             i++;
             break;
         case "02":
-            alert("Aqui tienes la lista de tareas:" + llistat + ".");
+            missatge=" "; //para que esté vacio
+            for (let k = 0; k < llistat.length; k++) {
+                if (llistat[k] != undefined) {//Para q no salga algo que borramos (huecos)
+                    missatge = missatge + " -  " + llistat[k] + "\n";
+                }
+            }
+
+            if (missatge == "") {
+                alert("La llista està buida");
+            } else {
+                alert("Aquí tens la llista de tasques:\n\n" + missatge);
+            }
+
             break;
         case "03":
             modificarTasca = prompt("Introdueix el títol de la tasca que vols modificar");
             for (let j = 0; j < llistat.length && taskEncontrada == 0; j++) {
                 if (modificarTasca == llistat[j]) {
                     titol = prompt("Como quieres llamar ahora a esta tarea?");
-                    llistat[i] = titol;
+                    llistat[j] = titol;
                     taskEncontrada = 1;
                 }
             }
@@ -63,7 +75,21 @@ while (menu != "05") {
 
             break;
         case "04":
-            alert("hola");
+            eliminarTasca = prompt("Introdueix el títol de la tasca que vols eliminar");
+            taskEncontrada = 0;//para reiniciar la variable antes de buscar
+
+            for (let j = 0; j < llistat.length && taskEncontrada == 0; j++) {
+                if (eliminarTasca == llistat[j]) {
+                    delete llistat[j];
+                    taskEncontrada = 1;
+                }
+            }
+
+            if (taskEncontrada == 1) {
+                alert("Tasca eliminada correctamente");
+            } else {
+                alert("No s'ha trobat cap tasca amb aquest titol");
+            }
             break;
     }
 
