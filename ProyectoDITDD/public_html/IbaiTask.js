@@ -12,27 +12,24 @@ let eliminarTasca;
 let i = 0;
 let taskEncontrada=0;
 
-alert("¡Hola Buenas! Bienvenido a ibaiTask, la mejor aplicación para organizarse.\n\
-En esta aplicación, podràs organizarte con las siguientes opciones.\n\n\
- A continuacion, veras las opciones que tienes: \n\n\
-· Añadir Task(01)\n\
-· Ver la lista de Tasks(02)\n\
-· Modiuficar la Task(03)\n\
-· Eliminar Task(04)\n\
-· Salir de la aplicación(05)\n\
-\n\
-Tienes que elegir una de estas opciones,\n\
- para elegir alguna, escribe el numero asignado de cada uno");
+alert("¡Hola buenas! Bienvenido a ibaiTask, la mejor aplicación para organizarse.\n\
+En esta aplicación, podrás organizarte con las siguientes opciones.\n\n\
+ A continuación, verás las opciones que tienes: \n\n\
+· Añadir Task\n\
+· Ver la lista de Tasks\n\
+· Modificar la Task\n\
+· Eliminar Task\n\
+· Salir de la aplicación");
 
-menu = prompt("Que opción eliges? \n\n\
-· Añadir Task(01)\n\
-· Ver la lista de Tasks(02)\n\
-· Modificar la Task(03)\n\
-· Eliminar Task(04)\n\
-· Salir de la aplicación(05)\n\
+menu = prompt("¿Que opción eliges? \n\n\
+· Añadir Task (01)\n\
+· Ver la lista de Tasks (02)\n\
+· Modificar la Task (03)\n\
+· Eliminar Task (04)\n\
+· Salir de la aplicación (05)\n\
 \n\
 Tienes que elegir una de estas opciones,\n\
- para elegir alguna, escribe el numero asignado de cada uno.");
+para hacerlo, escribe el número asignado de cada una.");
 
 
 
@@ -40,7 +37,7 @@ while (menu != "05") {
 
     switch (menu) {
         case "01":
-            titol = prompt("Como quieres llamar ahora a esta tarea?");
+            titol = prompt("Como quieres llamar a esta nueva tarea?");
             llistat[i] = titol;
             i++;
             break;
@@ -53,14 +50,14 @@ while (menu != "05") {
             }
 
             if (missatge == "") {
-                alert("La llista està buida");
+                alert("La lista está vacía");
             } else {
                 alert("Aquí tens la llista de tasques:\n\n" + missatge);
             }
 
             break;
         case "03":
-            modificarTasca = prompt("Introdueix el títol de la tasca que vols modificar");
+            modificarTasca = prompt("Introduce el título de la tarea que quieres modificar");
             for (let j = 0; j < llistat.length && taskEncontrada == 0; j++) {
                 if (modificarTasca == llistat[j]) {
                     titol = prompt("Como quieres llamar ahora a esta tarea?");
@@ -70,12 +67,12 @@ while (menu != "05") {
             }
 
             if (taskEncontrada == 0) {
-                alert("No s'ha trobat cap tasca amb aquest titol");
+                alert("No se ha encontrado ninguna tarea con este título");
             }
 
             break;
         case "04":
-            eliminarTasca = prompt("Introdueix el títol de la tasca que vols eliminar");
+            eliminarTasca = prompt("Introduce el título de la tarea que quieres eliminar");
             taskEncontrada = 0;//para reiniciar la variable antes de buscar
 
             for (let j = 0; j < llistat.length && taskEncontrada == 0; j++) {
@@ -86,29 +83,29 @@ while (menu != "05") {
             }
 
             if (taskEncontrada == 1) {
-                alert("Tasca eliminada correctamente");
+                alert("Task eliminada correctamente");
             } else {
-                alert("No s'ha trobat cap tasca amb aquest titol");
+                alert("No se ha encontrado ninguna tarea con este título");
             }
             break;
     }
 
-    menu = prompt("Que opción eliges? \n\n\
-    · Añadir Task(01)\n\
-    · Ver la lista de Tasks(02)\n\
-    · Modificar la Task(03)\n\
-    · Eliminar Task(04)\n\
-    · Salir de la aplicación(05)\n\
+    menu = prompt("¿Que opción eliges? \n\n\
+    · Añadir Task (01)\n\
+    · Ver la lista de Tasks (02)\n\
+    · Modificar la Task (03)\n\
+    · Eliminar Task (04)\n\
+    · Salir de la aplicación (05)\n\
     \n\
     Tienes que elegir una de estas opciones,\n\
-    para elegir alguna, escribe el numero asignado de cada uno.");
+    para hacerlo, escribe el número asignado de cada uno.");
                     
 taskEncontrada = 0;
 
 }
 
 if (menu == "05") {
-    alert("Fins la proxima, màster");
+    alert("Hasta la próxima, máster");
 }
 
 
