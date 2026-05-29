@@ -21,7 +21,7 @@ En esta aplicación, podrás organizarte con las siguientes opciones.\n\n\
 · Eliminar Task\n\
 · Salir de la aplicación");
 
-menu = prompt("¿Que opción eliges? \n\n\
+menu = prompt("¿Qué opción eliges? \n\n\
 · Añadir Task (01)\n\
 · Ver la lista de Tasks (02)\n\
 · Modificar la Task (03)\n\
@@ -90,7 +90,7 @@ while (menu != "05") {
             break;
     }
 
-    menu = prompt("¿Que opción eliges? \n\n\
+    menu = prompt("¿Qué opción eliges? \n\n\
     · Añadir Task (01)\n\
     · Ver la lista de Tasks (02)\n\
     · Modificar la Task (03)\n\
